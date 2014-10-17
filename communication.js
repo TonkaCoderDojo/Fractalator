@@ -14,7 +14,7 @@ client.messages(message.sid).get(function(err, message) {
             to: message.from, // Not sure if this is correct, and the documentation doesn't seem to help.
             from: "" // Put number here.
         }, function(err, message) {
-            process.stdout.write(message.sid); // Change this if needed; it's what was in the example on the Twilio documentation.
+            process.stdout.write(message.sid); } // Change this if needed; it was in the Twilio documentation.
     } else if (numbers.length > 2) {
         client.messages.create({
         /* Right now, I'm assuming that we only want two numbers.
@@ -24,6 +24,6 @@ client.messages(message.sid).get(function(err, message) {
             to: message.from, // Again, unsure if this is correct.
             from: "" // Put number here.
         }, function(err, message) {
-            process.stdout.write(message.sid);
+            process.stdout.write(message.sid); }
     } else {} // Do something here.
 });
