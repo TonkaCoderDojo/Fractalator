@@ -6,7 +6,7 @@ var app = require('express'); // Move this if necessary.
 app.POST('/receive',function() {});
 
 client.messages(message.sid).get(function(err, message) {
-    var number_regex = /[1234567890]{1,50}/; // Change the latter number depending on the math constraints.
+    var number_regex = /[0-9]{1,50}/; // Change the latter number depending on the math constraints.
     var numbers = message.body.match(number_regex); // match should return an array with the matches in them, if any.
     if (numbers.length < 2) {
         client.messages.create({
